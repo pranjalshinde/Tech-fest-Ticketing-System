@@ -86,7 +86,7 @@ class Event_tree//tree of events
 		
 		if(root_e == null)
 		{
-			System.out.println("\t\t\t\tList of events is empty") ;
+			System.out.println("\t\t\t\t!!\tList of events is empty/t!!") ;
 		}
 		if(ptr != null)
 		{
@@ -99,7 +99,7 @@ class Event_tree//tree of events
 			if(ptr.data != null)
 			{
 				
-				System.out.println("\t\t\t\t\t\t--\tList of participants\t--") ;//displaying according to time slots
+				System.out.println("\t\t\t\t\t\t\t--\tList of participants\t--") ;//displaying according to time slots
 				System.out.println() ;
 				System.out.println("\t\t\t\tTime slot 1 : ") ;
 				//System.out.println() ;
