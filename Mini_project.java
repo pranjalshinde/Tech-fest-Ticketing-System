@@ -1,6 +1,6 @@
 
 
-package branch1__mini;
+package mini_project;
 import java.util.* ;
 
 class Node_e//node of events
@@ -618,7 +618,7 @@ class Participant_tree//tree of participants
 	}
 
 }
-public class Branch1_minin {
+public class Mini_project {
 
 	public static void main(String args[])
 	{
