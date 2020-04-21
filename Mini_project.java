@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //Comments
+=======
+
+>>>>>>> 2819b0af039286b83e9abb13e64eb574536f3ad5
 
 package mini_project;
 import java.util.* ;
@@ -86,7 +90,11 @@ class Event_tree//tree of events
 		
 		if(root_e == null)
 		{
+<<<<<<< HEAD
 			System.out.println("\t\t\t\t!!\tList of events is empty/t!!") ;
+=======
+			System.out.println("\t\t\t\tList of events is empty") ;
+>>>>>>> 2819b0af039286b83e9abb13e64eb574536f3ad5
 		}
 		if(ptr != null)
 		{
@@ -99,7 +107,11 @@ class Event_tree//tree of events
 			if(ptr.data != null)
 			{
 				
+<<<<<<< HEAD
 				System.out.println("\t\t\t\t\t\t\t--\tList of participants\t--") ;//displaying according to time slots
+=======
+				System.out.println("\t\t\t\t\t\t--\tList of participants\t--") ;//displaying according to time slots
+>>>>>>> 2819b0af039286b83e9abb13e64eb574536f3ad5
 				System.out.println() ;
 				System.out.println("\t\t\t\tTime slot 1 : ") ;
 				//System.out.println() ;
@@ -767,10 +779,10 @@ public class Mini_project {
 						
 						break ;
 					case 4 :
-						System.out.println() ;
-						System.out.println("\t\t\t\tEnter email id of participant : ") ;
-						String f = op1.nextLine() ;
-						p.delete(f) ;
+						//System.out.println() ;
+						//System.out.println("\t\t\t\tEnter email id of participant : ") ;
+						//String f = op1.nextLine() ;
+						//p.delete(f) ;
 						break ;
 					case 0 :
 						System.out.println() ;
