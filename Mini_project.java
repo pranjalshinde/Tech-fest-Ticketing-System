@@ -11,14 +11,14 @@ class Node_e//node of events
 	Node_e right ;//right ptr
 	Node_e()//constructor
 	{
-		data = null ;
+		data = null ;//initialization
 		left = null ;
 		right = null ;
 	}
 }
 class Event_tree//tree of events
 {
-	Node_e root_e ;
+	Node_e root_e ;//root node of tree
 	Event_tree()//constructor
 	{
 		root_e = null ;
@@ -32,7 +32,7 @@ class Event_tree//tree of events
 		Scanner sc = new Scanner(System.in) ;
 		System.out.println() ;
 		System.out.println() ;
-		System.out.print("\t\t\t\tEnter name of event : ") ;
+		System.out.print("\t\t\t\tEnter name of event : ") ;//accepting information of event
 		temp.event_name = sc.nextLine() ;
 		//System.out.println() ;
 		System.out.print("\t\t\t\tEnter first time slot in the form (t1 to t2) : ") ;//this needs validation..
@@ -40,7 +40,7 @@ class Event_tree//tree of events
 		//System.out.println() ;
 		System.out.print("\t\t\t\tEnter second time slot in the form (t1 to t2) : ") ;
 		temp.time_slot_2 = sc.nextLine() ;
-		if(root_e == null)
+		if(root_e == null)//if tree is empty
 		{
 			root_e = temp ;
 		}
@@ -81,7 +81,7 @@ class Event_tree//tree of events
 	void inorder_e(Node_e ptr,int i,Participant_tree t[])// displaying the list
 	{
 
-		if(root_e == null)
+		if(root_e == null)//if tree is empty
 		{
 			System.out.println("\t\t\t\tList of events is empty") ;
 		}
@@ -91,7 +91,7 @@ class Event_tree//tree of events
 			inorder_e(ptr.left,i,t);
 			System.out.println() ;
 			System.out.println() ;
-			System.out.println("\t\t\t\t\t\t\t**\tEvent name : "+ptr.event_name+"\t**");
+			System.out.println("\t\t\t\t\t\t\t**\tEvent name : "+ptr.event_name+"\t**");//displaying name of event
 			System.out.println() ;
 			if(ptr.data != null)
 			{
@@ -116,7 +116,7 @@ class Event_tree//tree of events
 			inorder_e(ptr.right,i,t);
 		}
 	}
-	void display_eventlist(Node_e ptr)
+	void display_eventlist(Node_e ptr)//displaying all the events
 	{
 		if(root_e == null)
 		{
@@ -136,39 +136,38 @@ class Event_tree//tree of events
 		int j = 0 ;
 		Node_e ptr = root_e ;
 		int flag = 0 ;
-		if(ptr == null)
+		if(ptr == null)//if tree is empty
 		{
 			System.out.println("\t\t\t\t----   List of events is empty   ----") ;
 		}
 		while(ptr != null)
 		{
-			if(s.equalsIgnoreCase(ptr.event_name))
+			if(s.equalsIgnoreCase(ptr.event_name))//if string matches with event name
 			{
 				flag = 1 ;
 				break ;
 			}
-			if(s.compareTo(ptr.event_name) >  0)
+			if(s.compareTo(ptr.event_name) >  0)//if string is alphabetically greater than current node's event name
 			{
 				ptr = ptr.right ;
 				j++ ;
 			}
-			else
+			else//if string is alphabetically smaller than current node's event name
 			{
 				ptr = ptr.left ;
 				j++ ;
 			}
 		}
-		if(flag == 1)
+		if(flag == 1)//if event is found in the list
 		{
 			System.out.println() ;
-			//System.out.println("\t\t\t\tEvent name : "+ptr.event_name) ;
 			inorder_e(ptr,j,t) ;
 			return j ;
 
 		}
-		else
+		else//
 		{
-			System.out.println("\t\t\t\t -----   This Event has not found in list   -----" ) ;// if the event is not found
+			System.out.println("\t\t\t\t -----   This Event is not found in the list   -----" ) ;// if the event is not found
 			System.out.println() ;
 			return -1 ;
 		}
@@ -211,7 +210,7 @@ class Event_tree//tree of events
 		}
 		else
 		{
-			System.out.println("\t\t\t\t -----   This Event has not found in list   -----" ) ;// if the event is not found
+			System.out.println("\t\t\t\t -----   This Event is not found in list   -----" ) ;// if the event is not found
 		}
 	}
 	void delete_e(String s,int j,int m,Participant_tree t[])//function to delete a word
